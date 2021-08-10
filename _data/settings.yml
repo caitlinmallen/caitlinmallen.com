@@ -16,20 +16,16 @@ menu:
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
-- {icon: 'twitter', link:    'https://twitter.com/paululele'}
-- {icon: 'facebook', link:   'https://www.facebook.com/paululele'}
-- {icon: 'instagram', link:  'https://instagram.com/paululele'}
-- {icon: 'envelope', link:   'mailto:hello@paulle.ca'}
-- {icon: 'rss-square', link: 'feed.xml'}
-# - {icon: 'rss-square', link: 'rss-feed.xml'}
+- {icon: 'twitter', link:    'https://twitter.com/CaitlinMAllenn'}
+- {icon: 'linkedin', link:  'https://www.linkedin.com/in/caitlinallenn/'}
 
 # Customize site text
 pagination:
   next_page: 'Newer'
   previous_page: 'Older'
 
-sharing_button_prompt: 'Feel free to share!'
+sharing_button_prompt: 'Share with your followers and friends!'
 
-related_posts: 'You may also enjoy...'
+related_posts: 'You might also like...'
 
 post_date_prefix: 'Written on'
