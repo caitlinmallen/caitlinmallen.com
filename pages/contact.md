@@ -4,4 +4,8 @@ title: Contact
 permalink: /contact
 ---
 
-This theme is completely free and open source software. You may use it however you want, as it is distributed under the [MIT License](http://choosealicense.com/licenses/mit/). If you are having any problems, any questions or suggestions, feel free to [tweet at me](https://twitter.com/intent/tweet?text=My%question%about%Millennial%is:%&amp;via=paululele), or [file a GitHub issue](https://github.com/lenpaul/Millennial/issues/new).
+Want to get in touch? You can reach me below!
+
+Looking to reach out about job openings? Below is my resume and you can contact me via LinkedIn private message and I'll get back to you as soon as possible.
+
+<object data="/assets/Caitlin M._Allen_Resume.pdf" width="900" height="800" type='application/pdf'/>
