@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Integrating Snort NIDS with Splunk
-date: 2020-05-12 16:19:55 +0300
 author: "Caitlin Allen"
+date: 2020-05-12 16:19:55 +0300
 description: Documentation on integrating Snort as a network intrusion detection system with Splunk for threat hunting and penetration testing purposes with Mutillidae
 img: snort.png
 tags: [Snort, IDS, Splunk, Threat Hunting, Penetration Testing, Final, Final Project] 
