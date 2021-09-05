@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about
+img:  caitlinallenrainbow.jpg # Add image post (optional)
 ---
 
 Hi! My name is Caitlin M. Allen and I am a threat analyst at a security company in Vermont. I graduated in May of 2021 with my Bachelor's in Computer Networking & Cybersecurity with a minor in Computer & Digital Forensics. While at Champlain, I was the Communications Lead for Womxn in Technology and a member of Cybersecurity Club and Digital Forensics Assocition. 
