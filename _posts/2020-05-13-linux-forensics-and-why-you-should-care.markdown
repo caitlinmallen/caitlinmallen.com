@@ -4,7 +4,7 @@ title: Linux Forensics
 author: "Caitlin Allen"
 date: 2020-05-13 00:00:00 +0300
 description: The basics on Linux forensics and why you should know a bit of Linux forensics!
-img: LinuxForensicsPhoto.jpg # Add image post (optional)
+image: LinuxForensicsPhoto.jpg # Add image post (optional)
 tags: [Linux, Linux Forensics, DFIR, Forensics]
 ---
 
