@@ -1,0 +1,19 @@
+---
+layout: post
+title: WiCyS 2021 Conference
+author: "Caitlin Allen"
+date: 2021-10-02 09:45:55 +0300
+description: Recap of WiCyS 2021 in Denver, CO!
+image: C_Award.jpg
+tags: [Women in Cybersecurity, WiCyS, Capstone, Threat intelligence, threat hunting] 
+---
+Last month was WiCyS 2021 in Denver, Colorado, and my first time flying since COVID started. I am happy to have represented my alma mater, Champlain College, and present my capstone research to others in the industry. Not only did I meet other threat analysts, but I got to meet people of all different backgrounds, kick ass in Raytheon's Cybersecurity Jeopardy with two other current Champlain students, and have drinks with some amazing women working in the industry currently. While having conferences virtually still allowed me to learn while working or doing homework, nothing beats being able to fly to another state and network with other people.\
+On the first day, I came in pretty jet lagged since I had a 5:30Am flight out of Burlington, with literally 10 minutes to run across the terminal in Detroit and my capstone poster in hand. Once I arrived and checked into my room, I brought my poster down and met up with a friend's WiCyS mentor before starting to explore all the different events being held. We ended up in Raytheon's jeopardy and got second place as a team!\
+The second day, was poster presentation day. It was absolutely nerve wracking to have to present my research that I had super bad imposter syndrome about. Online capstone during COVID meant that I could not put in as much as I wanted amongst other personal issues impacting academic performance out of my control. I wish I could have put 12 hours a week into it, but often it was only a few to turn in something by a deadline. This made me insecure about presenting amongst master's students and PhD students presenting their dissertations and thesises. I was pleasently surprise to have threat analysts, professors, and others within the industry to come up and talk about how they loved reading my poster and were looking to discuss with me, I was given business cards and interviewed for jobs I never imagined I could have with an out of this world pay. I remember struggling with capstone and stressing about job hunting last winter, to have my worries disappear and confidence return.\
+![Me with my poster!](/assets/img/C_Poster.jpg){:class="img-responsive"}\
+Friday was an exciting day of watching presentations, packing up to go and visit a friend in Denver so we could explore Rocky Mountain National and the Painted Mines, my boyfriend flew in for the weekend, and I got to see incredibly interesting presentations on things like threat hunting and aviation security. But the most exciting of all, I won an award for my poster. To be honest, I didn't even know it was a competition and I was just happy to be there!\
+I was presented with the Undergraduate Research Honorable Mention award! I was absolutely floored to see my name up on a screen for over 1200 people to see, attached to my own research. I never imagined I would win an award for my research! 
+![Being presented with my award](/assets/img/C_Award.jpg){:class="img-responsive"}\
+These wonderful women pictured below, had absolutely amazing research and I wish them the absolute best in their endeavors. Their research gave me so much hope for the future of cybersecurity because of their wonderful research that will continue to help progress our field.\
+![All poster presenters](/assets/img/C_Group.jpg){:class="img-responsive"}\
+WiCyS was inspiring and it was great to finally get out and meet some incredible women and allies to women. Hopefully I'll see everybody in Cleveland next year!
