@@ -21,9 +21,9 @@ Rather than using a physical CD-ROM, we’ll be using an Optical Disc Image, or 
 
 ## What You’ll Need
 
-    Oracle VirtualBox - download here and choose the package for your operating system
-    Windows XP ISO– download here
-    Let’s Ride ISO – In the bottom right corner where it says ‘ISO Image Files’, download Disc 2 or use this direct download of the file
+* Oracle VirtualBox - [download here](https://www.virtualbox.org/) and choose the package for your operating system
+* Windows XP ISO – [download here](https://archive.org/details/XPProSP3ActivatedIE8WMP11)
+* Let’s Ride ISO – In the bottom right corner where it says ‘ISO Image Files’, [download Disc 2](https://archive.org/details/Lets_Ride_Champions_Collection_ValuSoft_2003/Let%27s%20Ride%20Champions%20Collection%20%28ValuSoft%29%282003%29%2810280-2%29%28Disc%202%29.jpg) or use this [direct download of the file](https://archive.org/download/Lets_Ride_Champions_Collection_ValuSoft_2003/Let%27s%20Ride%20Champions%20Collection%20%28ValuSoft%29%282003%29%2810280-2%29%28Disc%202%29.iso)
 
 ## Setting up your VM
 
