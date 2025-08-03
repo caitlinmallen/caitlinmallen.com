@@ -29,8 +29,6 @@ Rather than using a physical CD-ROM, we’ll be using an Optical Disc Image, or 
 
 Once you’ve installed VirtualBox, we’ll be able to get started with setting up Windows XP.
 
-![You should see something similar, but without any existing virtual machines]( /assets/img/LetsRide_VirtualBox.png}{: .center-image }
-
 At the top of the window, you’ll see a few options such as ‘New’ and ‘Add.’ Click on the ‘New’ blue sun(?) to open up the set up wizard.
 
 ![Not exactly sure what to call this shape, hence the (?)]( /assets/img/LetsRide_NewVM.png){: .center-image }
