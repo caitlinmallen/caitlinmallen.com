@@ -74,7 +74,7 @@ Navigate to where your game file is and remember to choose Disc 2, since this is
 ![]( /assets/img/LetsRide_SetUp16.png){: .center-image }
 
 Now that you’re set, lets go over how to make your display a bit bigger.
-![Don’t worry, it won’t be this small forever]( /assets/img/LetsRide_SetUp12.png) {: .center-image }
+![Don’t worry, it won’t be this small forever]( /assets/img/LetsRide_SetUp12.png){: .center-image }
 
 In the top menu bar, go to View > Scaled Mode
 ![]( /assets/img/LetsRide_SetUp1.png){: .center-image }
