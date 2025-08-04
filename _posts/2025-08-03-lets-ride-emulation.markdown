@@ -27,9 +27,9 @@ Rather than using a physical CD-ROM, we’ll be using an Optical Disc Image, or 
 
 ## Setting up your VM
 
-Once you’ve installed VirtualBox, we’ll be able to get started with setting up Windows XP.\
+Once you’ve installed VirtualBox, we’ll be able to get started with setting up Windows XP.
 
-At the top of the window, you’ll see a few options such as ‘New’ and ‘Add.’ Click on the ‘New’ blue sun(?) to open up the set up wizard.
+At the top of the window, you’ll see a few options such as **New** and **Add.** Click on the ‘New’ blue sun(?) to open up the set up wizard.
 
 ![Not exactly sure what to call this shape, hence the (?)]( /assets/img/LetsRide_NewVM.png){: .center-image }
 
@@ -52,7 +52,7 @@ The set-up wizard will now display a summary of your configurations.
 
 ![Summary of the configs on my end]( /assets/img/LetsRide_SetUp1.png){: .center-image }
 
-Revisit that top menu bar and choose the ‘Start’ green arrow. Your VM will power up and pop open a new window. You’ll see this blue screen while it starts to boot up the new operating system.
+Revisit that top menu bar and choose the **Start** green arrow. Your VM will power up and pop open a new window. You’ll see this blue screen while it starts to boot up the new operating system.
 
 ![]( /assets/img/LetsRide_SetUp7.png){: .center-image }
 
@@ -63,43 +63,43 @@ Once the operating system is ready to go, you’ll see this iconic screen and XP
 
 ![Absolute icon]( /assets/img/LetsRide_SetUp10.png){: .center-image }
 
-Before you fret about the screen size, we’ll load the game file into the computer. In the top menu, click Device > Choose/Create a Disk Image
+Before you fret about the screen size, we’ll load the game file into the computer. In the top menu, click **Device > Choose/Create a Disk Image**
 
 ![]( /assets/img/LetsRide_SetUp15.png){: .center-image }
 
-Navigate to where your game file is and remember to choose Disc 2, since this is the game file with the Farnam Three Day eventing game. Once selected, click ‘Open’.
+Navigate to where your game file is and remember to choose **Disc 2**, since this is the game file with the Farnam Three Day eventing game. Once selected, click **Open**.
 
 ![]( /assets/img/LetsRide_SetUp16.png){: .center-image }
 
 Now that you’re set, lets go over how to make your display a bit bigger.
 ![Don’t worry, it won’t be this small forever]( /assets/img/LetsRide_SetUp12.png){: .center-image }
 
-In the top menu bar, go to View > Scaled Mode
+In the top menu bar, go to **View > Scaled Mode**
 ![]( /assets/img/LetsRide_SetUp1.png){: .center-image }
 
 You should get a pop up letting you know about the host key. This will be the Right Control key. I have two monitors, so I just bring my cursor over to my other monitor and click. But for those who only have one monitor, you’ll want to remember the host key.
 
 ![My configurations]( /assets/img/LetsRide_SetUp13.png){: .center-image }
 
-In the start menu, click on My Computer
+In the start menu, click on **My Computer**
 
 ![]( /assets/img/LetsRide_SetUp17.png){: .center-image }
 
-You should now see that there is a drive called Jumper (D:) in the Devices with Removable Storage section! Double click and we’ll install the game!
+You should now see that there is a drive called **Jumper (D:)** in the Devices with Removable Storage section! Double click and we’ll install the game!
 
 ![]( /assets/img/LetsRide_SetUp18.png){: .center-image }
 
 ![]( /assets/img/LetsRide_SetUp19.png){: .center-image }
 
-Click install now and go through the install wizard. You can leave the default settings and just click ‘Next’.
+Click **Install Now** and go through the install wizard. You can leave the default settings and just click **Next**.
 
 ![Use Complete]( /assets/img/LetsRide_SetUp21.png){: .center-image }
 
-Click ‘Yes’ when you get the DirectX 8 pop-up.
+Click **Yes** when you get the **DirectX 8 pop-up**.
 
 ![My configurations]( /assets/img/LetsRide_SetUp22.png){: .center-image }
 
-The time has come, click ‘Play Now’!
+The time has come, click **Play Now!**
 
 ![Let’s Ride!]( /assets/img/LetsRide_SetUp23.png){: .center-image }
 
