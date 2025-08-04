@@ -12,7 +12,7 @@ First time posting something in four years!
 About a year ago, I was trying to remember this specific horse game I played growing up. It was the ‘Let’s Ride Champion Seasons’ game, and not a whole lot seemed to exist on the Internet about it. I eventually found a YouTube channel that had posted some of the game and said they were emulating it and found the files on Internet Archive!
 I posted an Instagram story once I set up my own Let’s Ride game in a Windows XP VM. Pretty quickly, I got a few requests for how I did this. I know a lot of people who had asked don’t work in tech or are not familiar with how to use VirtualBox. This guide is made to be accessible for all those who want to play their childhood horse game, whether or not they’ve ever even touched a VM.
 
-![The Let’s Ride title screen]( /assets/img/LetsRide_Title.png){: .center-image }
+![]( /assets/img/LetsRide_Play4.gif){: .center-image }
 
 ## How Does This Work?
 To give a TL;DR, you’ll be running another computer on your physical computer. This is done using a virtual machine, or VM for short. If you want to read a little bit more about what a VM is, VMware has a page with an overview.
