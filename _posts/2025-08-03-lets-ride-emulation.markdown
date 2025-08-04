@@ -8,16 +8,16 @@ image: 123456.jpeg
 tags: [Project, Gaming, Horses, Equestrian, Lets Ride]
 ---
 
-First time posting something in four years!
-About a year ago, I was trying to remember this specific horse game I played growing up. It was the ‘Let’s Ride Champion Seasons’ game, and not a whole lot seemed to exist on the Internet about it. I eventually found a YouTube channel that had posted some of the game and said they were emulating it and found the files on Internet Archive!
+First time posting something in four years!\
+About a year ago, I was trying to remember this specific horse game I played growing up. It was the ‘Let’s Ride Champion Seasons’ game, and not a whole lot seemed to exist on the Internet about it. I eventually found a YouTube channel that had posted some of the game and said they were emulating it and found the files on Internet Archive!\
 I posted an Instagram story once I set up my own Let’s Ride game in a Windows XP VM. Pretty quickly, I got a few requests for how I did this. I know a lot of people who had asked don’t work in tech or are not familiar with how to use VirtualBox. This guide is made to be accessible for all those who want to play their childhood horse game, whether or not they’ve ever even touched a VM.
 
 ![]( /assets/img/LetsRide_Play4.gif){: .center-image }
 
 ## How Does This Work?
-To give a TL;DR, you’ll be running another computer on your physical computer. This is done using a virtual machine, or VM for short. If you want to read a little bit more about what a VM is, VMware has a page with an overview.
+To give a TL;DR, you’ll be running another computer on your physical computer. This is done using a virtual machine, or VM for short. If you want to read a little bit more about what a VM is, [VMware](https://www.vmware.com/topics/virtual-machine) has a page with an overview.\
 
-Rather than using a physical CD-ROM, we’ll be using an Optical Disc Image, or ISO. This contains everything that would be on a physical disc, but it is now just a file on your computer. Lenovo has a brief overview about ISOs for those wanting to learn more.
+Rather than using a physical CD-ROM, we’ll be using an Optical Disc Image, or ISO. This contains everything that would be on a physical disc, but it is now just a file on your computer. [Lenovo](https://www.lenovo.com/us/en/glossary/iso-image/) has a brief overview about ISOs for those wanting to learn more.
 
 ## What You’ll Need
 
@@ -27,7 +27,7 @@ Rather than using a physical CD-ROM, we’ll be using an Optical Disc Image, or 
 
 ## Setting up your VM
 
-Once you’ve installed VirtualBox, we’ll be able to get started with setting up Windows XP.
+Once you’ve installed VirtualBox, we’ll be able to get started with setting up Windows XP.\
 
 At the top of the window, you’ll see a few options such as ‘New’ and ‘Add.’ Click on the ‘New’ blue sun(?) to open up the set up wizard.
 
@@ -107,5 +107,5 @@ I was so freaking excited to finally get this set up and I’m so happy to share
 
 ![]( /assets/img/LetsRide_Play1.gif){: .center-image }
 
-My only qualm with the game is how I don’t exactly understand the dressage scoring (why am I losing points for walking when that is the gait I need to be doing?) and how you have to take what seems like you need to jump 4 strides out than you normally would (I’ve jumped maybe 7 times in my life, so don’t take my word for it).
+My only qualm with the game is how I don’t exactly understand the dressage scoring (why am I losing points for walking when that is the gait I need to be doing?) and how you have to take what seems like you need to jump 4 strides out than you normally would (I’ve jumped maybe 7 times in my life, so don’t take my word for it).\
 You can also use this guide for other games from your childhood. As long as you can find the ISO file (which should be found with a few Google searches and a Reddit thread or two), you can play whatever games you want.
