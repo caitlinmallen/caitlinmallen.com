@@ -15,7 +15,7 @@ I posted an Instagram story once I set up my own Let’s Ride game in a Windows 
 ![]( /assets/img/LetsRide_Play4.gif){: .center-image }
 
 ## How Does This Work?
-To give a TL;DR, you’ll be running another computer on your physical computer. This is done using a virtual machine, or VM for short. If you want to read a little bit more about what a VM is, [VMware](https://www.vmware.com/topics/virtual-machine) has a page with an overview.\
+To give a TL;DR, you’ll be running another computer on your physical computer. This is done using a virtual machine, or VM for short. If you want to read a little bit more about what a VM is, [VMware](https://www.vmware.com/topics/virtual-machine) has a page with an overview.
 
 Rather than using a physical CD-ROM, we’ll be using an Optical Disc Image, or ISO. This contains everything that would be on a physical disc, but it is now just a file on your computer. [Lenovo](https://www.lenovo.com/us/en/glossary/iso-image/) has a brief overview about ISOs for those wanting to learn more.
 
