@@ -4,7 +4,7 @@ title: Emulating Horse Games on Windows XP Walkthrough
 author: "Caitlin Allen"
 date: 2025-08-03 16:19:55 +0300
 description: A walkthrough for folks looking to emulate the “Let’s Ride” games on Windows XP
-image: LetsRide_TitlePhoto.jpeg
+image: 123456.jpeg
 tags: [Project, Gaming, Horses, Equestrian, Lets Ride]
 ---
 
