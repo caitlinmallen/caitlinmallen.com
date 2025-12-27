@@ -7,9 +7,9 @@ disqus:
 google-ID: ''
 
 menu:
-- {name: 'Documentation',      url: 'documentation'}
 - {name: 'About',              url: 'about'}
 - {name: 'Contact',            url: 'contact'}
+- {name: 'Documentation',      url: 'documentation'}
 - {name: 'Resources',          url: 'resources'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
