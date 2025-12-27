@@ -195,3 +195,5 @@
   - Can monitor items at the kernel level
   - By default, records when root logins are attempted and when a password is changed
   - Stored in binary format -> use praudit to read
+ 
+![MacOSX](/assets/img/Apple-WWDC24-macOS-Sequoia-Window-Tiling-240610.jpg.large_2x.jpg)
