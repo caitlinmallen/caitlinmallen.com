@@ -1,0 +1,197 @@
+# MacOS File System and Files
+
+## File Extensions
+
+- .dmg - Apple Disk Image file. This is commonly seen in software installers
+  - Mount and access data inside the files
+  - A bit of a combination between a ZIP and ISO file
+- .kext
+  - Kernel extension -> Runs in kernel space
+  - Kext bundles are the OS X version of a driver
+  - Actually a directory you can browse the contents of
+  - Elevated privileges
+- .plist
+  - Property List -> Store settings for users or bundles or apps
+  - Store XML content
+  - Some are stored in binary format and can be converted back to XML
+- .app
+  - Apple application
+  - Structured directory you can browse through
+- .dylib
+  - Dynamic library -> Equivalent to a DLL (Dynamic Link Library)
+  - Loaded at run time
+- .pkg
+  - Same as xar (eXtensible ARchive format) with a different file extension and hierarchy
+  - Pkgutil is built into the command line
+  - [installer](https://ss64.com/mac/installer.html) can be used to install these contents
+- [Macho-O](https://developer.apple.com/library/archive/documentation/Performance/Conceptual/CodeFootprint/Articles/MachOOverview.html)
+  - Executable format of binaries for OS X
+  - Similar to ELF in Linux and PE in Windows
+
+## File Hierarchy Layout
+
+- /Applications
+  - Apps will be installed in this directory
+  - All users can access apps installed here
+- /Library
+  - Holds many subdirectories by default
+    - Some related to app preferences, caches, and logs
+  - Exists in a user directory and the root directory
+    - Some data is stored on a per user basis
+- /System
+  - Files required to make OS X run
+  - Most will be specific to Apple
+- /Users
+  - Equivalent to the Linux /home directory
+  - Every user will have their own directory
+- /Volumes
+  - Any drives mounted to your system are shown here
+  - Root hard drive is shown as a soft link pointed at '/'
+- /.vol
+  - Related to a virtual file system that exists on top of HFS+ (or HFS Standard)
+  - File records on the hard drive are stored by inode numbers and not file names
+  - Interact with these files via their inode number
+  - 'ls' will not show any contents of this directory
+- /bin
+  - Command-line binaries
+    - cat, ls, echo, ifconfig, ps, etc.
+- /usr
+  - Configurations and system binaries
+- /cores
+  - May or may not exist
+  - Stores core dumps
+- /sbin
+  - Essential system binaries
+    - Related to admin
+- /dev
+  - Short for 'device'
+  - Unix treats everything as a file -> hardware devices are stored here and sometimes Bluetooth connected devices
+- /etc
+  - Configuration files
+  - Symbolic link to /private/etc
+- /tmp
+  - Temporary files
+  - Files are deleted after 3 days by default
+  - Soft link to /private/tmp
+- /private
+  - Contains sensitive data, resources, and configuration files
+  - Four subdirectories
+    - /etc
+      - Configuration files and scripts for the entire system
+    - /tftpboot
+      - Blank folder that stores TFTP data related to NetBoot
+    - /tmp
+      - Temporary files
+    - /var
+      - System-related cache files
+- /var
+  - Log files
+  - Console app is the easiest way to view these logs
+  - Constantly changing or updating files in the directory
+
+## Miscellaneous Files
+
+- Hidden Files and Directories
+  - Start with a '.' Ex. /.folder
+  - Can be viewed using ls -a to see hidden files and directories
+- .DS_Store
+  - Can find this in any directory you've browsed to with Finder
+  - Holds attributes and customizations of the directory it is stored in
+    - Icons, views, and finder colors
+- .Spotlight-V100
+  - Created in root directory of every volume in the system
+  - Index information for reference by the search tool, Spotlight
+- .metadata_never_index
+  - If this file is at the root of a volume, Spotlight will not index the volume
+    - Recovery Partition is an example of a volume that will have this
+- &lt;FolderName&gt;.noindex
+  - Will not be indexed by Spotlight
+  - Can be used nefariously to ensure a malicious file does not show up in Spotlight
+
+## Key File Artifacts
+
+- ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV\*
+  - SQL database with information about files downloaded form the internet
+  - Works with the com.apple.quarantine extended attribute
+- ~/.bash_history
+  - Lists recent commands executed via the bash shell
+  - Bash interactive sessions will write to this file after the shell exits
+- /etc/profile
+  - Can be used to modify bash environment upon loading an interactive session
+    - Includes variable commands and functions
+  - Can point to bash debug scripts to allow for hooking inside of different executables
+  - Apply to interactive bash sessions system wide
+- /etc/bashrc
+  - By default, this file is imported by /etc/profile
+  - System wide
+- ~/.bash_profile | ~/.bash_login | ~/.profile | ~/.bashrc
+  - Additional files that allow for adding variables and functions to the bash shell once loaded
+  - Some can only be loaded under certain circumstances
+- ~/.bash_logout
+  - Can hold a list of commands to execute when a user logs out of a bash shell
+- /var/log/system.log
+  - Main OS X system log
+  - Store details about operating system errors and security
+  - Modern OS X stores ssh, ftp, and other information
+  - Incredibly valuable for security -> should not be disabled
+  - com.apple.syslogd.plist is responsible for the execution of syslogging at startup
+    - Confirm syslogging is not disabled by searching for com.apple.syslogd inside of the 'launchctl list' output
+- /private/var/log/asl/\*.asl
+  - Apple System Logs
+    - Alternative to system.log
+    - Can contain more information
+  - Can print the logs ordered by a UTC timestamp using 'syslog -T UTC'
+- ~/Library/Preferences/com.apple.recentitems.plist
+  - Recently accessed files and applications from Finder
+- ~/Library/Preferences/com.apple.finder.plist
+  - Details regarding Finder and what is seen when it is opened
+- ~/Library/Preferences/com.apple.loginitems.plist
+  - Items that are launched upon start up
+- ~/Library/Logs/DiskUtility.log
+  - Log file for DiskUtility
+    - Information on when drives were formatted, including USB drives
+- /Library/Preferences/SystemConfiguration/com.apple.airport/preferences.plist
+  - Contains info about wireless access points the system has connected to
+  - 'LastConnected' key is useful as it contains the timestamp for when an access point was last connected
+- /private/etc/resolv.conf
+  - DNS nameservers to be used
+- /private/var/db/launchd.db/com.apple.launchd/overrides.plist
+  - Contains a list of launch agents that have been permanently unloaded
+    - Syslog plist being unloaded would be a red flag
+- /private/etc/kcpassword
+  - Exists if autologin is enabled
+  - User's password is masked with an XOR key
+- /private/etc/sudoers
+  - List of users allowed to log into the root account
+- /private/etc/hosts
+  - Force resolves IP addresses to domains
+- /private/var/log/fsck_hfs.log
+  - Fsck_hfs utility log
+    - Runs checks and repairs on a HFS+ file system
+- /Library/Logs/AppleFileService/AppleFileServiceError.log
+  - Errors related to the Apple Filing Protocol
+    - Used to share files across devices
+  - Apple now focuses on using SMB -> AFP is still available to be used
+- /var/log/apache2/access_log
+  - Apache web server activity log
+- /var/log/apache2/error_log
+  - Errors related to the httpd service
+- /var/log/opendirectoryd.log
+  - Open Directory is a launchd process that allows the operating system to access a variety of directory servers
+- /var/log/wifi.log
+  - Results about different wireless details
+  - Can show if somebody was on a network at a certain time
+  - Contains info about wireless connections such as Bluetooth
+- /var/log/appfilewall.log
+  - Application Firewall logs
+    - System Settings > Security & Privacy > Firewall
+  - Uses pfctl rule to accomplish tasks
+- /var/log/hdiejectd.log
+  - Errors related to drives failing to unmount
+- /var/log/install.log
+  - Details about app updates, upgrades, and installs
+- /var/audit/\*
+  - Related to the auditd daemon
+  - Can monitor items at the kernel level
+  - By default, records when root logins are attempted and when a password is changed
+  - Stored in binary format -> use praudit to read
