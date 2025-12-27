@@ -16,6 +16,7 @@ menu:
 social:
 - {icon: 'twitter', link:    'https://twitter.com/CaitlinMAllenn'}
 - {icon: 'linkedin', link:  'https://www.linkedin.com/in/caitlinallenn/'}
+- {icon: 'github', link:    'https://github.com/caitlinmallen'}
 
 # Customize site text
 pagination:
