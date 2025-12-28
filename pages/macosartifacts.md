@@ -4,8 +4,6 @@ title: macOS File System and Files Artifacts
 permalink: /macosartifacts
 ---
 
-# MacOS File System and Files
-
 ## File Extensions
 
 - .dmg - Apple Disk Image file. This is commonly seen in software installers
