@@ -128,7 +128,7 @@ permalink: /macosartifacts
 - /etc/bashrc
   - By default, this file is imported by /etc/profile
   - System wide
-- ~/.bash_profile | ~/.bash_login | ~/.profile | ~/.bashrc
+- ~/.bash_profile,  ~/.bash_login,  ~/.profile,  ~/.bashrc
   - Additional files that allow for adding variables and functions to the bash shell once loaded
   - Some can only be loaded under certain circumstances
 - ~/.bash_logout
