@@ -1,7 +1,7 @@
 ---
 layout: page 
 title: macOS File System and Files Artifacts
-permalink: /resources/macosartifacts
+permalink: /resources/macos/macosartifacts
 ---
 
 ## File Extensions
