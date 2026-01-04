@@ -1,7 +1,7 @@
 ---
 layout: page 
 title: Property Lists & Launch Agents
-permalink: /resources/macos/macosartifacts
+permalink: /resources/macos
 ---
 ## Property List Breakdown
 
