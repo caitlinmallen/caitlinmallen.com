@@ -5,4 +5,5 @@ permalink: /resources
 ---
 Resources by operating system
 
-[macOS](https://caitlinmallen.com/resources/macos)
+- [macOS](https://caitlinmallen.com/resources/macos)
+- [Linux](https://caitlinmallen.com/resources/linux)
