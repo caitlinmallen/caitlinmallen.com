@@ -3,7 +3,6 @@ layout: page
 title: Resources
 permalink: /resources
 ---
+Resources by operating system
 
-Some good things to have on hand for your security investigations!
-
-[MacOS File System Artifacts and Files](https://caitlinmallen.com/resources/macosartifacts)
+[macOS](https://caitlinmallen.com/resources/macos.md)
