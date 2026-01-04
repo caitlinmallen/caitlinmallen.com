@@ -1,7 +1,7 @@
 ---
 layout: page 
 title: macOS Resources
-permalink: /macos
+permalink: /resources/macos
 ---
 
 Some good things to have on hand for your security macOS investigatons
