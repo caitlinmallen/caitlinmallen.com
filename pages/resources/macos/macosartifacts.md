@@ -3,6 +3,18 @@ layout: page
 title: macOS File System and Files Artifacts
 permalink: /resources/macos/macosartifacts
 ---
+## Quick Search 
+- [File Extensions](##File-Extensions)
+- [File Hierarchy](##File-Hierarchy-Layout)
+- [Miscellaneous Files](##Miscellaneous-Files)
+- [Key File Artifacts](##Key-File-Artifacts)
+    - [Bash](#####Bash)
+    - [System Logs](#####System-Logs)
+    - [Plists & Launch Agents](#####Plists-&-Launch-Agents)
+    - [Apache Logs]( #####Apache-Logs)
+
+
+
 ## File Extensions
 
 - **.dmg** - Apple Disk Image file. This is commonly seen in software installers
@@ -91,6 +103,8 @@ permalink: /resources/macos/macosartifacts
   - Log files
   - Console app is the easiest way to view these logs
   - Constantly changing or updating files in the directory
+
+![Basic Folder Structures in Mac and Linux](/assets/img/Basic_folder_structures_in_Mac_and_Linux_systems.png)
 
 ## Miscellaneous Files
 
