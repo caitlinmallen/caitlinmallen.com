@@ -1,6 +1,6 @@
 ---
 layout: page 
-title: PE File Format
+title: All About PE Files!
 permalink: /resources/windows/portableexecutables
 ---
 
