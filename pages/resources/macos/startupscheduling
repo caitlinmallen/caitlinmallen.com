@@ -1,5 +1,3 @@
-For those that somehow found this page, this is a WIP and will be published soon!
-
 # Additional System Startup & Scheduling Methods
 
 ## Crontab
@@ -13,7 +11,7 @@ For those that somehow found this page, this is a WIP and will be published soon
 - Files stored in plaintext
   - Stored in /usr/lib/cron/tabs
 - Cron is enabled by default on OS X
-
+![cron format](https://tecadmin.net/wp-content/uploads/2013/03/crontab-2.png)
 - Some built in features include:
   - @reboot /path/to/script -> Will run script at every system startup
   - @yearly /path/to/script -> Will run script at the first minute of every year
