@@ -3,6 +3,15 @@ layout: page
 title: All About PE Files!
 permalink: /resources/windows/portableexecutables
 ---
+## Quick Search 
+- [PE File Format](#PE-File-Format)
+- [DOS & NT Headers](##DOS&amp;NTHeaders)
+- [Miscellaneous Files](##Miscellaneous-Files)
+- [Data Directories](###Data-Directories)
+- [Sections](###Sections)
+- [Terminology](##Terminology)
+- [DLL](##DLL)
+- [PE File Analysis]( #PE-File-Analysis)
 
 # PE File Format
 
