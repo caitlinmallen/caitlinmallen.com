@@ -1,4 +1,8 @@
-# Additional System Startup & Scheduling Methods
+---
+layout: page 
+title: Additional System Startup & Scheduling Methods
+permalink: /resources/macos/startupscheduling
+---
 
 ## Crontab
 
