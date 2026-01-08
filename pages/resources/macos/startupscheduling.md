@@ -64,3 +64,42 @@
 	- Ex. sudo kextload /path/to/file
 - [codesign](https://www.unix.com/man_page/osx/1/codesign/) can be ran on KEXT bundles
 	- Will tell you what KEXTs are signed and who signed them
+
+## Less Popular Persistence Mechanisms
+
+- launchd was not introduced until OS X 10.4 (Tiger)
+  - Not always responsible for ensuring everything boots up correctly.
+- Some old persistence mechanisms have been deprecated in favor of launchd
+  - com.apple.loginitems.plist
+    - Property list used to run services when a user logs in
+    - Located in /Users/\$USER/Library/Preferences/com.apple.loginitems.plist
+    - Contains a list of apps to run at start up
+      - More service like such as Dropbox or Google Drive
+    - View these by running 'defaults' or 'plist-buddy' on the plist.
+- 'at' command
+  - Apple has disabled the usage of at as a scheduler by default, but it still comes installed on the OS
+    - 'at tasks' are used to schedule tasks at a specific time
+    - Not like cron due to being one time tasks that are removed after execution
+      - Can survive a system restart
+  - Enable the tasks using launchctl
+    - sudo launchctl load -F /System/Library/LaunchDaemons/com.apple.atrun.plist
+      - Will print a hello world to /tmp/hello.txt
+  - View a user's at tasks with 'atq'
+  - Collect verbose at tasks from /private/var/at/jobs
+    - Even if a task is not executed, it will still be in here
+    - Will be stored with a random identification number
+      - Ex. /private/var/at/jobs/a000080170e832
+    - Printing the file will show user information and variables followed by the command the user has scheduled
+- init
+  - Before launchd, init was used and functions differently
+    - Back when it was responsible for system startup, plists were not used
+    - Would run rc scripts
+      - Bash scripts with some variables and a path to a target process
+  - Executing from /etc/rc.common does not work on El Capitan
+- launchd.conf
+  - Deprecated as of Yosemite
+  - launchd used to refer to config files to collect custom settings
+    - Only existed if manually created
+  - Found at /etc/launchd.conf
+  - launchctl bsexec
+    - Tells the launchd to execute a specific process
