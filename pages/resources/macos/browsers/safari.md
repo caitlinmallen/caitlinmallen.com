@@ -4,6 +4,7 @@ title: Browser Analysis - Safari
 permalink: /resources/macos/browsers/safari
 ---
 
+## Overview 
 - Default browser built into OS X
 
 	- Integrated syncing across OS X and Ios DEVICES
