@@ -10,3 +10,4 @@ Some good things to have on hand for your macOS investigatons
 - [OSX Incident Response Scripts from 'OS X Incident Response Scripting and Analysis by Jason Bradley'](https://github.com/caitlinmallen/osxir)
 - [Property Lists & Launch Agents](https://caitlinmallen.com/resources/macos/plists)
 - [Startup System & Scheduling](https://caitlinmallen.com/resources/macos/startupscheduling)
+- [Browser Analysis](https://caitlinmallen.com/resources/macos/browsers)
