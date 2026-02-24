@@ -11,3 +11,4 @@ Some good things to have on hand for your macOS investigatons
 - [Property Lists & Launch Agents](https://caitlinmallen.com/resources/macos/plists)
 - [Startup System & Scheduling](https://caitlinmallen.com/resources/macos/startupscheduling)
 - [Browser Analysis](https://caitlinmallen.com/resources/macos/browsers)
+- [Memory Analysis](https://caitlinmallen.com/resources/macos/osxmemory)
