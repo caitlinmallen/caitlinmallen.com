@@ -1,7 +1,7 @@
 ---
 layout: page 
 title: macOS Memory Analysis 
-permalink: /resources/macos
+permalink: /resources/macos/osxmemory
 ---
 ## Overview
 
