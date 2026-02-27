@@ -9,3 +9,6 @@ Here is a collection of documentation from projects I have worked on. Below you'
 
 ### Snort Integration with Splunk for Threat Hunting and Penetration Testing
 <a href="/assets/SnortSplunkIntegration.pdf" download> Click to view<a/>
+
+### HackRF One Research and Tutorial from 2017 Leahy Center Internship
+<a href="/assets/HackRFOne.pdf" download> Click to view<a/>
