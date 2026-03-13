@@ -1,0 +1,349 @@
+---
+layout: post
+title: Magnet Virtual Summit CTF 2026
+author: "Caitlin Allen"
+date: 2026-03-12 16:19:55 +0300
+description:  Magnet Virtual Summit CTF Write Up and Reflections
+image: MVS26_BlogHeaders_CTF-scaled.png
+tags: [Forensics, CTF, Magnet, MVS, Digital Forensics, Capture the Flag] 
+---
+It's been a few years since I last participated in a CTF, so I'm happy I was able to try my hand at the Magnet Virtual Summit 2026 CTF powered by Hexordia. I have such fond memories of the Magnet 2019 Summit in Nashville and their collaboration with Champlain College's Digital Forensics Association (DFA). So opening up Axiom really brought back those memories!
+
+## Pre-Analysis
+
+The night before the CTF, I opened up Axiom Examine to take a brief look at each of the evidence sources and try to piece together the scenario.
+
+Based off some poking around in emails and chat applications, there is an insider threat investigation that needs to occur around data being brought to a competitor/outside actor. A shared folder called 'Crown Jewels' made me think that these are the organization's [crown jewels](https://tldrsec.com/p/intent-over-tactics-crown-jewels), or the most important and critical assets.
+
+Lets take a look at each evidence source
+
+### iPhone 14 Plus
+
+- - **Device Phone Name:** Alex's iPhone
+    - **Device Phone Number:** 18024954197
+    - **Apple ID:** [alexmaurie2002@icloud.com](mailto:alexmaurie2002@icloud.com)
+    - **IMEIs:** 351906515098518, 351906515452319
+    - **69583** Artifacts
+    - **Emails:** <amaurie.iss.secure@gmail.com>, [alexmaurie2002@icloud.com](mailto:alexmaurie2002@icloud.com)
+    - **Details noticed:**
+    - In Signal, Alex is talking with a **T Blizzard** who says to use **Zangi**
+    - Contact on Zangi for T Blizzard is **36-6828-5259**
+    - Alex's Zangi number is **91-9312-9592**
+
+![](/assets/img/MCTF261.png){: .center-image }
+
+## Samsung A53
+
+- - **Bluetooth Name:** Daniel's A53
+    - **Emails**: [danieljonesonline55@gmail.com](mailto:danieljonesonline55@gmail.com), [djones.iss.secure@gmail.com](mailto:djones.iss.secure@gmail.com)
+    - **Wifi Networks:** ChamplainGuest, HexTysons37 -> phantomopera255
+    - **Reddit:** u/DanielJonesOnline
+    - **IG:** danieljonesonline55
+    - **Phone Number:** 15712825974
+    - Email has a folder called 'Hidden Gems' that was shared by a Calum Richardson, who seems to be working with Alex and Daniel on a project at Astronautica Intergalactica
+      - Calum is leaving for vacation
+
+![](/assets/img/MCTF262.png){: .center-image }
+## Macbook Pro
+
+- Hostname: Alexs-MacBook-Pro
+- Username: alexmaurie
+- Multiple network interfaces
+  - **82:93:71:A2:5C:00**
+  - **82:93:71:A2:5C:01**
+  - **82:93:71:A2:5C:05**
+  - **82:93:71:A2:5C:04**
+  - **AC:DE:48:00:11:22**
+  - **F0:18:98:1B:96:14**
+- Emails: [alexmaurie2002@icloud.com](mailto:alexmaurie2002@icloud.com) & [amaurie.iss.secure@gmail.com](mailto:amaurie.iss.secure@gmail.com)
+- Google Drive and Signal appear to be installed
+- Alex's iPhone is connected via iCloud
+
+## Google Takeout
+
+- Associated with Daniel and there is a personal and work takeout
+  - Personal
+    - Associated with a Google Pixel Watch
+    - IMEI: 351232292988767
+  - Work
+    - SM-S536DL device
+    - IMEI: 352574702801745
+- I noted there were two interesting conversations occurring in email and text. These allude to something occurring with Daniel possibly?
+
+![](/assets/img/MCTF263.png){: .center-image }
+![](/assets/img/MCTF264.png){: .center-image }
+# Cipher Challenges
+
+Let's do a quick run down of what I did
+
+#### Can you Handle this one?
+
+![](/assets/img/MCTF265.png){: .center-image }
+The above binary decodes hex string. Once the hex is decoded, you got the flag.  
+**Flag:** [**https://startme.stark4n6.com/**](https://startme.stark4n6.com/)
+
+![](/assets/img/MCTF266.png){: .center-image }
+#### Peel Back the Layers
+
+This was actually a lot easier than you'd think. I was staring at the flag the entire time but kept thinking "they wouldn't make it this easy".
+
+There were multiple photos in the artifact folder we were given. There was a manifest file that I thought was giving me coordinates to the flag in a completely different file, so I was using every steganography tool I could think of to find it. I found a link in a shocked Pikachu photo, which was a Rick Roll (and not the flag).  
+Turns out, the image of Link had the flag in the bottom left corner.
+
+![](/assets/img/MCTF267.png){: .center-image }
+![](/assets/img/MCTF268.png){: .center-image }
+**Flag: <https://github.com/abrignoni>**
+
+#### Good Grief
+
+The flag was in this pigpen cipher! BUT, you then had to decode an Atbash cipher that you need to decode.
+
+![](/assets/img/MCTF269.png){: .center-image }
+![](/assets/img/MCTF2610.png){: .center-image }
+**Flag: DOUBLEBLAK**
+
+#### Cows come in all shapes and sizes
+
+This challenge uses an executable called 'moo.exe' that uses cowsay. The cow says to feed it a key.
+
+My first thought was to decompile the PYC files and open the program up in IDA and HexWalk to try to see what is going on (and maybe the key is hidden in there).
+
+Decoding moo.pyc did not give me a key unfortunately, but did show me what the program was doing.
+
+![](/assets/img/MCTF2611.png){: .center-image }
+After not finding anything, I remembered in college we used Resource Hacker in our malware analysis class! So, I opened up the program in Resource Hacker and began to look at the associated files.
+
+![](/assets/img/MCTF2612.png){: .center-image }
+I found a barcode and uploaded it to a barcode scanner. The barcode displays '_7e0d78a5af1cae300cddbce0f9be3232f32cc5f428e45c36e52f8087ee0a_'. Re-ran the program with that output and was able to get the flag.
+
+![](/assets/img/MCTF2613.png){: .center-image }
+![](/assets/img/MCTF264.png){: .center-image }
+![](/assets/img/MCTF2615.png){: .center-image }
+**Flag:** [**https://evanolevm.com/**](https://evanolevm.com/)
+
+# iOS Challenges
+
+I ended up focusing the most on these. Not really on purpose, just felt like I was on a roll with it and kept at it.
+
+#### Need a challenge?
+
+What Instagram handle does User ID 2278169415 belong to?
+
+**Flag: mrbeast**
+
+![](/assets/img/MCTF2616.png){: .center-image }
+#### So thoughtful
+
+What item does the user need to buy for Christmas?
+
+**Flag: headphones**
+
+![](/assets/img/MCTF2617.png){: .center-image }
+#### Don't Lose Your Data
+
+In UTC when was the last iCloud backup? (YYYY-MM-DD HH:MM:SS)
+
+I actually did not get this during the CTF because I totally did not realize the timestamp was already in UTC, and NOT eastern \*_facepalm_\*. Just needed to switch 6pm to 18:00:10.
+
+I went back after the CTF ended to see what was wrong and finally got it after just doing a simple copy and paste.  
+**Flag: 2025-12-12 18:00:10**
+
+![](/assets/img/MCTF2618.png){: .center-image }
+#### What a caring coworker
+
+How many people did the user message expressing concern about Daniel?
+
+I did a keyword search for 'Daniel' and looked under the communication related artifacts. I was able to find three messages to coworkers asking about Daniel.
+
+**Flag: 3**
+
+#### Go the Distance
+
+What was the farthest distance the user logged in meters? (Round to the nearest hundredth)?
+
+What I absolutely love about Magnet is the interface and app support. To find this flag, navigate to the Apple Health app and you can do a little scroll or sort by Key Detail to find the flag.  
+**Flag: 472.01**
+
+![](/assets/img/MCTF2619.png){: .center-image }
+**Do you have any games on your phone?**
+
+What genre of app did the user download the most of?
+
+I looked at Installed apps and noticed there were mostly messaging apps  
+Confirmed the genre title on Apple's website via <https://developer.apple.com/app-store/categories/>.
+
+**Flag: Social Networking**
+
+#### That would look nice in my garage
+
+What is the make and model of the car that was photographed without a iPhone?
+
+I remembered seeing there were Google searches for a Mclaren Senna when I did my pre-analysis. I navigated to Media > Photos Media Information and then found the car to confirm.
+
+There were also Google searches related to the new F1 regulations, so maybe Alex is also a Mclaren fan?
+
+**Flag: Mclaren Senna**
+
+![](/assets/img/MCTF2620.png){: .center-image }
+#### Where are we going?
+
+What airport was the phone near when it pinged off of a cell tower on 2025-12-16 22:47:24 (UTC)?
+
+I had Magnet build out a map view to show where the phone has been. The phone was mostly in Burlington, VT, but the flag was not Burlington Airport. Instead, it was an airport on Long Island!
+
+![](/assets/img/MCTF2621.png){: .center-image }
+**Flag: Long Island MacArthur Airport**
+
+#### I prefer the color blue
+
+What is the name including extension of the purple tagged file?
+
+I struggled with this one and opted to skip it during the actual CTF. This is because in the moment, I was confused by what the question meant with a tagged file.
+
+Once Hexordia posted their answers, it finally made sense that they were talking about the iCloud files stored locally on the system.  
+I approached this originally by keyword searching for 'purple', but that didn't work.
+
+Turns out with this question, we needed to dive into a SQLite table located at _private\\var\\mobile\\Library\\Application Support\\CloudDocs\\session\\db\\client.db_ and find the item_finder_tags column.
+
+To easily navigate to this, you needed to open up the Cloud Storage artifact list, click on a file located within the database (or specifically, the gif file), then search the SQLite database.
+
+Since this one stumbled me up a bit, I thought this would be good to include in here.
+
+![](/assets/img/MCTF2622.png){: .center-image }
+![](/assets/img/MCTF2623.png){: .center-image }
+**Flag: how-a-turbo-works.gif**
+
+**I like your spirit**
+
+What secondhand item was the user searching for?
+
+Originally, I tried to look at the user's web browsing history, which is stored in a SQLite database. These SQLite databases where the flags are stored are very similar to their macOS counterparts. We'll want to search for the history.db table to get a more comprehensive view of the history.
+
+Under Web Related, open the Safari History tab and click on a visited URL. In the evidence information panel, the source filepath is where we want to go
+
+**00008110-0008196A2299401E_files_full.zip\\private\\var\\mobile\\Library\\Safari\\History.db**
+
+Since I know the user had Depop, I was trying to find hits for Depop.
+
+![](/assets/img/MCTF2624.png){: .center-image }
+However, I did not find this in time for the actual CTF. Turns out, we would be searching an unsupported app, and not history.db.
+
+When you opened the Depop app, theres a few KTX files. For context, these are Khronos Texture files. iOS stores snapshots in this file format. We are able to more simply find the answer by opening up a KTX file.
+
+![](/assets/img/MCTF2625.png){: .center-image }
+**Flag: fun festive sweater**
+
+#### That's not a Mario character
+
+What is the mascot of the frozen dessert shop that the user visits a lot?
+
+Okay so I went to Champlain and saw this question and immediately knew this was about Shy Guy Gelato. Its right below the 194 Saint Paul Street housing and right by my old apartment soooo not really much forensics here…
+
+![](/assets/img/MCTF2626.png){: .center-image }
+![](/assets/img/MCTF2627.png){: .center-image }
+**Flag: Panda**
+
+# Android Challenges
+
+#### Anything open this time of night?
+
+What is the name of the establishment the user took a screenshot of?
+
+![](/assets/img/MCTF2628.png){: .center-image }
+**Flag: 99 Restaurant**
+
+#### Three Star Exit
+
+The Samsung Digital Wellness database is what tracks application opens and closes.
+
+![](/assets/img/MCTF2629.png){: .center-image }
+Since the timestamp is already in UTC, we just need to convert this to 24 hour time for the flag.
+
+**Flag: 2025-12-15 18:07:05**
+
+#### Long Distance Call
+
+What country was the other party from for a rejected/declined call?
+
+![](/assets/img/MCTF2630.png){: .center-image }
+**Flag: Saudi Arabia**
+
+#### Clean Lens
+
+What is the Ingress rating of the security camera that supports night vision?
+
+I keyword searched for 'camera' and found the favicons had a link to the night vision camera. So, I went to the link and found the specs!
+
+![](/assets/img/MCTF2631.png){: .center-image }
+![](/assets/img/MCTF2632.png){: .center-image }
+**Flag: IP67**
+
+#### The MVS Times
+
+What was the answer to the first Wordle puzzle solved?
+
+There is for sure a better way to do this, but I searched for 'Wordle' and Googled the Wordle solution.
+
+As a horse person, I was quite shocked to see it was 'colic'.
+
+![](/assets/img/MCTF2633.png){: .center-image }
+**Flag: COLIC**
+
+#### Secure Attachment
+
+What is the name of the client the user was most recently working on?
+
+Alex had mentioned them in their Signal messages to T Blizzard, which gave me a bit of a lead. There were some files shared and emails related to them. A quick search confirmed this, but you could have glanced through Gmail to figure this out.
+
+![](/assets/img/MCTF2634.png){: .center-image }
+**Flag: Hidden Gems**
+
+# Macbook Challenges
+
+#### Salt and Pepper
+
+What is the password hashing algorithm for the "alexmaurie" user?
+
+![](/assets/img/MCTF2635.png){: .center-image }
+**Flag: SALTED-SHA512-PBKDF2**
+
+#### Pedal to the Metadata
+
+What was the name of the racing game the user installed?
+
+View the Installed Apps and you'll see a game called 'Asphalt'. The full package name includes 9, indicating it's the 9<sup>th</sup> of the series.  
+A quick Google search let me know its Asphalt 9: Legends
+
+**Flag: Asphalt 9: Legends**
+
+#### Running on Fumes
+
+What was the lowest batter level the device reached?
+
+To find this, you'll want to navigate to the PowerLog Battery Level and then you can sort the recorded battery levels.
+
+![](/assets/img/MCTF2636.png){: .center-image }
+**Flag: 39**
+
+#### Identity Crisis
+
+What is the IMEI of the connected iPhone?
+
+![](/assets/img/MCTF2637.png){: .center-image }
+**Flag: 351906515098518**
+
+#### Ssssneaky Logs
+
+What version of Python did the user have installed?
+
+![](/assets/img/MCTF26238.png){: .center-image }
+**Flag: 3.9.6**
+
+# Conclusion
+
+I ended up with 315 points, which I don't think is too bad for not doing a CTF in a while!
+
+![](/assets/img/MCTF2639.png){: .center-image }
+After spending a few years as a security analyst, being able to put my digital forensics hat back on was a blast! In college, I absolutely loved my forensics classes, especially malware analysis, and figuring out what could have happened on a host. Even without touching Axiom in the last few years, it was incredibly easy to pick back up, navigate, and find what I was looking for.
+
+Doing this CTF even inspired me to enroll in the Cyber5W Digital Forensic Analyst Bootcamp! I'm super excited to refresh my forensics knowledge and learn a bit more before I start a new role.
