@@ -9,6 +9,7 @@ tags: [Forensics, CTF, Magnet, MVS, Digital Forensics, Capture the Flag]
 ---
 It's been a few years since I last participated in a CTF, so I'm happy I was able to try my hand at the Magnet Virtual Summit 2026 CTF powered by Hexordia. I have such fond memories of the Magnet 2019 Summit in Nashville and their collaboration with Champlain College's Digital Forensics Association (DFA). So opening up Axiom really brought back those memories!
 
+*Sorry for the small screenshots! I had put these in a Word Doc while doing the CTF and then re-saved them from there. This might be why they're quite tiny!*
 
 ## Pre-Analysis
 
